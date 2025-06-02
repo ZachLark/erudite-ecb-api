@@ -1,126 +1,112 @@
 # GitBridge Webhook System Configuration
-# Environment: production
+# Version: 2.1.0
+# Environment: development
 
-version: "1.0"
+# Server settings
+server:
+  host: "0.0.0.0"
+  port: 8000
+  debug: true
+  ssl_enabled: false
 
-system:
-  environment: production  # [development, staging, production]
-  debug: false
-  log_level: INFO
-
-rate_limiter:
-  enabled: true
-  backend: redis
-  redis:
-    host: localhost
-    port: 6379
-    db: 0
-  limits:
-    default: 100  # requests per minute
-    authenticated: 500
-    webhook: 1000
-  fallback:
-    enabled: true
-    type: memory
-
+# Security settings
 security:
-  enabled: true
-  ip_whitelist:
-    enabled: true
-    auto_update: true
-    refresh_interval: 3600  # seconds
-  signature_validation:
-    enabled: true
-    algorithm: sha256
-  audit:
-    enabled: true
-    retention_days: 30
+  webhook_secret: "${GITHUB_WEBHOOK_SECRET}"
+  allowed_ips:
+    - "192.30.252.0/22"  # GitHub webhooks
+    - "185.199.108.0/22" # GitHub API
+  signature_header: "X-Hub-Signature-256"
+  max_payload_size: 10485760  # 10MB
 
-event_processor:
-  enabled: true
-  queue:
-    type: redis
-    max_size: 10000
-    timeout: 30
-  workers:
-    count: 4
+# Queue settings
+queue:
+  type: "redis"  # or "asyncio" for backward compatibility
+  redis_url: "redis://localhost:6379/0"
+  max_size: 10000
+  timeout: 30
+  retry_policy:
     max_retries: 3
-  filters:
-    - type: branch
-      patterns: [main, develop, feature/*]
-    - type: event
-      include: [push, pull_request, issues]
+    base_delay: 1  # seconds
 
-performance_monitor:
+# Task chain settings
+task_chain:
+  states:
+    - Created
+    - Queued
+    - ConsensusPending
+    - Resolved
+    - Failed
+  max_concurrent: 10
+  consensus_required: true
+
+# Rate limiting
+rate_limit:
   enabled: true
+  redis_url: "redis://localhost:6379/0"
+  default_limit: 100  # requests per hour
+  burst_limit: 10    # requests per minute
+
+# Monitoring
+monitoring:
+  prometheus_port: 9090
   metrics:
-    prometheus:
-      enabled: true
-      port: 9090
-    grafana:
-      enabled: true
-      dashboard_refresh: 60
-  alerts:
-    enabled: true
-    channels: [slack, email]
-    thresholds:
-      latency_ms: 1000
-      error_rate: 0.01
-      queue_depth: 1000
+    - queue_depth
+    - event_processing_time
+    - task_state_transitions
+    - error_rates
+  grafana:
+    dashboard_uid: "webhook-system"
+    refresh_interval: 10
 
-collaboration:
-  enabled: true
-  notifications:
-    slack:
-      enabled: true
-      channels: [gitbridge-alerts, gitbridge-reviews]
-    email:
-      enabled: true
-      smtp:
-        host: smtp.example.com
-        port: 587
-        use_tls: true
-  approvals:
-    required: true
-    min_reviewers: 2
-    timeout_hours: 24
+# Logging
+logging:
+  level: "INFO"
+  format: "json"
+  files:
+    event_log: "logs/event_log.json"
+    mas_log: "logs/mas_log.json"
+    error_log: "logs/error_log.json"
 
-developer_tools:
-  enabled: true
-  webhook_tester:
+# Development tools
+dev_tools:
+  mock_github_api: true
+  test_webhook_endpoint: "/test-webhook"
+  openapi:
     enabled: true
-    mock_responses: true
-  event_replay:
-    enabled: true
-    storage_days: 7
+    output_formats:
+      - markdown
+      - html
+      - pdf
 
-mas_integration:
-  enabled: true
-  protocol_version: "2.1"
-  task_generation:
-    enabled: true
-    max_concurrent: 10
-  agent_communication:
-    timeout: 30
-    retry_count: 3
-
-profiles:
+# Environment-specific overrides
+environments:
   development:
-    system:
+    server:
       debug: true
-      log_level: DEBUG
     security:
-      ip_whitelist:
-        enabled: false
-    performance_monitor:
-      enabled: false
-  
+      allowed_ips:
+        - "127.0.0.1"
+    logging:
+      level: "DEBUG"
+
   staging:
-    system:
+    server:
       debug: false
-      log_level: INFO
-    rate_limiter:
-      limits:
-        default: 50
-        authenticated: 200
-        webhook: 500 
+    security:
+      allowed_ips:
+        - "192.30.252.0/22"
+    logging:
+      level: "INFO"
+
+  production:
+    server:
+      debug: false
+      ssl_enabled: true
+    security:
+      allowed_ips:
+        - "192.30.252.0/22"
+    logging:
+      level: "WARNING"
+    monitoring:
+      grafana:
+        refresh_interval: 30 

@@ -1,4 +1,0 @@
-# file: /Users/zach/erudite-flask-api/mas_delegate.py
-# hypothesis_version: 6.132.0
-
-['--api-url', '--log-file', '--task-file', 'Path to log file', 'Request timed out', '[0-9a-fA-F]{64}', '__main__', 'a', 'assignee', 'description', 'max_cycles', 'task_id', 'timestamp', 'token_budget']

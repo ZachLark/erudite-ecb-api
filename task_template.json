@@ -1,7 +1,0 @@
-{
-    "task_id": "8fdc386f1e8b2786f774a96a9f2649b10600f7d66f84620ee9e22286ebcb294d",
-    "description": "Log out to console",
-    "assignee": "Grok",
-    "max_cycles": 10,
-    "token_budget": 5000
-}

@@ -1,11 +1,20 @@
 #!/usr/bin/env python3
-"""GitBridgev1 - Main Application Entry Point."""
+"""
+GitBridgev1 - Main Application Entry Point.
+
+This module serves as the main entry point for the GitBridge application,
+implementing the MAS Lite Protocol v2.1 for agent collaboration and task management.
+"""
 
 import os
 import logging
 from pathlib import Path
 from flask import Flask, render_template
 from flask_socketio import SocketIO
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # Configure logging
 logging.basicConfig(
@@ -41,20 +50,6 @@ def index():
     """Render main dashboard."""
     return render_template('dashboard.html')
 
-@app.errorhandler(404)
-def not_found_error(error):
-    """Handle 404 errors."""
-    return render_template('errors/404.html'), 404
-
-@app.errorhandler(500)
-def internal_error(error):
-    """Handle 500 errors."""
-    return render_template('errors/500.html'), 500
-
 if __name__ == '__main__':
-    logger.info('Starting GitBridgev1...')
-    socketio.run(app, 
-        host='0.0.0.0',
-        port=int(os.environ.get('PORT', 10002)),
-        debug=True
-    ) 
+    port = int(os.environ.get('PORT', 5000))
+    socketio.run(app, host='0.0.0.0', port=port, debug=False) 

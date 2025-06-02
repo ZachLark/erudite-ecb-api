@@ -1,4 +1,0 @@
-# file: /Users/zach/erudite-flask-api/generate_task_chain.py
-# hypothesis_version: 6.132.0
-
-[100, 1000, 1024, 2000, '\nConsensus Status:', '\nSection Coverage:', '\nTime Range:', '--batch', '--phase', '--preview', '--summarize', '1.1', '1.2', '2.0', '2.1', '3.0', '3.1', '4.0', '===================', 'Enter phase ID: ', 'Operation timed out', 'Writing tasks', '__main__', 'agent_assignment', 'agent_distribution', 'approved', 'chatgpt', 'completion_rate', 'consensus', 'consensus_status', 'description', 'descriptions', 'end', 'generate_draft', 'grok', 'grok_draft', 'high', 'low', 'mas_log.json', 'medium', 'outputs', 'pending', 'phase_id', 'priority_level', 'priority_levels', 'r', 'r+', 'rejected', 'review_draft', 'review_notes', 'section_coverage', 'sections', 'sections_reviewed', 'start', 'status', 'status_history', 'store_true', 'task_count', 'task_generator.log', 'task_id', 'time_range', 'timestamp', 'total_tasks', 'unknown', 'utf-8', 'w']

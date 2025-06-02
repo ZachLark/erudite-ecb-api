@@ -1,0 +1,49 @@
+{
+    "event": "push",
+    "payload": {
+        "repository": {
+            "id": 123456789,
+            "name": "GitBridgev1",
+            "full_name": "ZachLark/GitBridgev1",
+            "private": false,
+            "owner": {
+                "login": "ZachLark",
+                "id": 987654321
+            }
+        },
+        "ref": "refs/heads/feature/gbp13-redis",
+        "before": "0000000000000000000000000000000000000000",
+        "after": "1234567890abcdef1234567890abcdef12345678",
+        "created": true,
+        "deleted": false,
+        "forced": false,
+        "commits": [
+            {
+                "id": "1234567890abcdef1234567890abcdef12345678",
+                "message": "feat: Complete GBP13 Redis queue with integration tests",
+                "timestamp": "2025-06-02T12:00:00Z",
+                "author": {
+                    "name": "Zach Lark",
+                    "email": "zach@example.com"
+                }
+            }
+        ],
+        "head_commit": {
+            "id": "1234567890abcdef1234567890abcdef12345678",
+            "message": "feat: Complete GBP13 Redis queue with integration tests",
+            "timestamp": "2025-06-02T12:00:00Z",
+            "author": {
+                "name": "Zach Lark",
+                "email": "zach@example.com"
+            }
+        }
+    },
+    "metadata": {
+        "queue_key": "gitbridge:events",
+        "processing_key": "gitbridge:processing",
+        "enqueued_at": "2025-06-02T12:00:00.123456Z",
+        "priority": 1,
+        "retry_count": 0,
+        "task_chain_id": "gbp13_task_1234567890"
+    }
+} 

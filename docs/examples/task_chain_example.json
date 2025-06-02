@@ -1,0 +1,71 @@
+{
+    "task_id": "task_push_1685678533",
+    "agent": "octocat",
+    "parent_task_id": null,
+    "created_at": "2025-06-02T00:42:13Z",
+    "updated_at": "2025-06-02T00:42:45Z",
+    "status": "Resolved",
+    "retry_count": 0,
+    "error_message": null,
+    "lifecycle": [
+        {
+            "timestamp": "2025-06-02T00:42:13Z",
+            "event": "task_created",
+            "details": {
+                "task_id": "task_push_1685678533",
+                "agent": "octocat",
+                "source": "github_push"
+            }
+        },
+        {
+            "timestamp": "2025-06-02T00:42:15Z",
+            "event": "task_state_transition",
+            "details": {
+                "task_id": "task_push_1685678533",
+                "old_state": "Created",
+                "new_state": "Queued"
+            }
+        },
+        {
+            "timestamp": "2025-06-02T00:42:20Z",
+            "event": "task_state_transition",
+            "details": {
+                "task_id": "task_push_1685678533",
+                "old_state": "Queued",
+                "new_state": "ConsensusPending"
+            }
+        },
+        {
+            "timestamp": "2025-06-02T00:42:45Z",
+            "event": "task_state_transition",
+            "details": {
+                "task_id": "task_push_1685678533",
+                "old_state": "ConsensusPending",
+                "new_state": "Resolved",
+                "consensus_result": {
+                    "status": "approved",
+                    "votes": [
+                        {"agent": "agent1", "vote": "approve"},
+                        {"agent": "agent2", "vote": "approve"}
+                    ]
+                }
+            }
+        }
+    ],
+    "metadata": {
+        "event_type": "push",
+        "repo": "octocat/Hello-World",
+        "branch": "main",
+        "commit_id": "6dcb09b5b57875f334f61aebed695e2e4193db5e",
+        "files_changed": [
+            "src/app.py",
+            "tests/test_app.py",
+            "requirements.txt"
+        ],
+        "performance": {
+            "queue_latency_ms": 120,
+            "consensus_latency_ms": 250,
+            "total_latency_ms": 370
+        }
+    }
+} 

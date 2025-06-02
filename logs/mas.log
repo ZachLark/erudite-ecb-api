@@ -1,0 +1,61 @@
+{"asctime": "2025-06-02T01:56:46-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis enqueue error: Redis connection lost"}
+{"asctime": "2025-06-02T01:56:46-0700", "name": "scripts.redis_queue", "levelname": "WARNING", "message": "Falling back to asyncio queue"}
+{"asctime": "2025-06-02T01:59:38-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis enqueue error: Redis connection lost"}
+{"asctime": "2025-06-02T01:59:38-0700", "name": "scripts.redis_queue", "levelname": "WARNING", "message": "Falling back to asyncio queue"}
+{"asctime": "2025-06-02T02:10:42-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis enqueue error: Redis connection lost"}
+{"asctime": "2025-06-02T02:10:42-0700", "name": "scripts.redis_queue", "levelname": "WARNING", "message": "Falling back to asyncio queue"}
+{"asctime": "2025-06-02T02:20:47-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Queue is full"}
+{"asctime": "2025-06-02T02:21:42-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Queue is full"}
+{"asctime": "2025-06-02T02:21:42-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis enqueue error: "}
+{"asctime": "2025-06-02T02:22:46-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Queue is full"}
+{"asctime": "2025-06-02T02:22:46-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis enqueue error: "}
+{"asctime": "2025-06-02T02:28:11-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Queue is full"}
+{"asctime": "2025-06-02T02:28:11-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Queue is full"}
+{"asctime": "2025-06-02T02:28:11-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis enqueue error: "}
+{"asctime": "2025-06-02T02:28:11-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis connection failed: Connection refused"}
+{"asctime": "2025-06-02T02:28:11-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis connection failed: Error connecting to localhost:6379. Multiple exceptions: [Errno 61] Connect call failed ('::1', 6379, 0, 0), [Errno 61] Connect call failed ('127.0.0.1', 6379)."}
+{"asctime": "2025-06-02T02:28:11-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis enqueue error: "}
+{"asctime": "2025-06-02T02:28:11-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis enqueue error: "}
+{"asctime": "2025-06-02T02:28:11-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Asyncio enqueue error: "}
+{"asctime": "2025-06-02T02:30:46-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Queue is full"}
+{"asctime": "2025-06-02T02:30:46-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Queue is full"}
+{"asctime": "2025-06-02T02:30:46-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis enqueue error: "}
+{"asctime": "2025-06-02T02:30:46-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis connection failed: Connection refused"}
+{"asctime": "2025-06-02T02:30:46-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis connection failed: Error connecting to localhost:6379. Multiple exceptions: [Errno 61] Connect call failed ('::1', 6379, 0, 0), [Errno 61] Connect call failed ('127.0.0.1', 6379)."}
+{"asctime": "2025-06-02T02:30:46-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis enqueue error: "}
+{"asctime": "2025-06-02T02:30:46-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis enqueue error: "}
+{"asctime": "2025-06-02T02:30:46-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Asyncio enqueue error: "}
+{"asctime": "2025-06-02T02:31:53-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Queue is full"}
+{"asctime": "2025-06-02T02:31:53-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Queue is full"}
+{"asctime": "2025-06-02T02:31:54-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis enqueue error: "}
+{"asctime": "2025-06-02T02:31:54-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis connection failed: Connection refused"}
+{"asctime": "2025-06-02T02:31:54-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis connection failed: Error connecting to localhost:6379. Multiple exceptions: [Errno 61] Connect call failed ('::1', 6379, 0, 0), [Errno 61] Connect call failed ('127.0.0.1', 6379)."}
+{"asctime": "2025-06-02T02:31:54-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis enqueue error: "}
+{"asctime": "2025-06-02T02:31:54-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis enqueue error: "}
+{"asctime": "2025-06-02T02:31:54-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Asyncio enqueue error: "}
+{"asctime": "2025-06-02T02:31:54-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis enqueue error: Event must be a dictionary"}
+{"asctime": "2025-06-02T02:32:52-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Queue is full"}
+{"asctime": "2025-06-02T02:32:52-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Queue is full"}
+{"asctime": "2025-06-02T02:32:52-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis enqueue error: "}
+{"asctime": "2025-06-02T02:32:52-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis connection failed: Connection refused"}
+{"asctime": "2025-06-02T02:32:52-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis connection failed: Error connecting to localhost:6379. Multiple exceptions: [Errno 61] Connect call failed ('::1', 6379, 0, 0), [Errno 61] Connect call failed ('127.0.0.1', 6379)."}
+{"asctime": "2025-06-02T02:32:52-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis enqueue error: "}
+{"asctime": "2025-06-02T02:32:52-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis enqueue error: "}
+{"asctime": "2025-06-02T02:32:52-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Asyncio enqueue error: "}
+{"asctime": "2025-06-02T02:32:52-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis enqueue error: Event must be a dictionary"}
+{"asctime": "2025-06-02T02:32:53-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Asyncio dequeue error: object MagicMock can't be used in 'await' expression"}
+{"asctime": "2025-06-02T02:33:25-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Queue is full"}
+{"asctime": "2025-06-02T02:33:25-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Queue is full"}
+{"asctime": "2025-06-02T02:33:25-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis enqueue error: "}
+{"asctime": "2025-06-02T02:33:25-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis connection failed: Connection refused"}
+{"asctime": "2025-06-02T02:33:25-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis connection failed: Error connecting to localhost:6379. Multiple exceptions: [Errno 61] Connect call failed ('::1', 6379, 0, 0), [Errno 61] Connect call failed ('127.0.0.1', 6379)."}
+{"asctime": "2025-06-02T02:33:25-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis enqueue error: "}
+{"asctime": "2025-06-02T02:33:25-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis enqueue error: "}
+{"asctime": "2025-06-02T02:33:25-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Asyncio enqueue error: "}
+{"asctime": "2025-06-02T02:33:25-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis enqueue error: Event must be a dictionary"}
+{"asctime": "2025-06-02T02:33:25-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis dequeue error: "}
+{"asctime": "2025-06-02T02:33:25-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis queue depth error: Redis error"}
+{"asctime": "2025-06-02T02:33:25-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis dequeue error: "}
+{"asctime": "2025-06-02T02:33:25-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Asyncio dequeue error: "}
+{"asctime": "2025-06-02T02:33:25-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis cleanup error: Cleanup error"}
+{"asctime": "2025-06-02T02:33:25-0700", "name": "scripts.redis_queue", "levelname": "ERROR", "message": "Redis cleanup error: Cleanup error"}

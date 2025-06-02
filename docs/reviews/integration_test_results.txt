@@ -1,0 +1,251 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.13.3, pytest-8.3.5, pluggy-1.6.0 -- /Library/Frameworks/Python.framework/Versions/3.13/bin/python3
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/Users/zach/GitBridgev1/.hypothesis/examples'))
+benchmark: 4.0.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+rootdir: /Users/zach/GitBridgev1
+configfile: pytest.ini
+testpaths: tests
+plugins: xdist-3.7.0, asyncio-0.23.5, cov-4.1.0, hypothesis-6.98.0, benchmark-4.0.0
+asyncio: mode=Mode.STRICT
+collecting ... collected 6 items / 8 errors / 6 deselected / 0 selected
+
+==================================== ERRORS ====================================
+___________ ERROR collecting tests/integration/test_webhook_flow.py ____________
+ImportError while importing test module '/Users/zach/GitBridgev1/tests/integration/test_webhook_flow.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/_pytest/python.py:493: in importtestmodule
+    mod = import_path(
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/_pytest/assertion/rewrite.py:185: in exec_module
+    exec(co, module.__dict__)
+tests/integration/test_webhook_flow.py:16: in <module>
+    import redis
+E   ModuleNotFoundError: No module named 'redis'
+_____ ERROR collecting tests/unit/integrations/test_signature_validator.py _____
+ImportError while importing test module '/Users/zach/GitBridgev1/tests/unit/integrations/test_signature_validator.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/_pytest/python.py:493: in importtestmodule
+    mod = import_path(
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/_pytest/assertion/rewrite.py:185: in exec_module
+    exec(co, module.__dict__)
+tests/unit/integrations/test_signature_validator.py:8: in <module>
+    from integrations.signature_validator import SignatureValidator
+integrations/signature_validator.py:13: in <module>
+    from mas_core.utils.logging import MASLogger
+mas_core/utils/logging.py:14: in <module>
+    from pythonjsonlogger import jsonlogger
+E   ModuleNotFoundError: No module named 'pythonjsonlogger'
+______ ERROR collecting tests/unit/integrations/test_webhook_listener.py _______
+ImportError while importing test module '/Users/zach/GitBridgev1/tests/unit/integrations/test_webhook_listener.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/_pytest/python.py:493: in importtestmodule
+    mod = import_path(
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/_pytest/assertion/rewrite.py:185: in exec_module
+    exec(co, module.__dict__)
+tests/unit/integrations/test_webhook_listener.py:7: in <module>
+    from integrations.webhook_listener import app, receive_webhook
+integrations/webhook_listener.py:13: in <module>
+    from mas_core.utils.logging import MASLogger
+mas_core/utils/logging.py:14: in <module>
+    from pythonjsonlogger import jsonlogger
+E   ModuleNotFoundError: No module named 'pythonjsonlogger'
+____________ ERROR collecting tests/unit/mas_core/test_consensus.py ____________
+ImportError while importing test module '/Users/zach/GitBridgev1/tests/unit/mas_core/test_consensus.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/_pytest/python.py:493: in importtestmodule
+    mod = import_path(
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/_pytest/assertion/rewrite.py:185: in exec_module
+    exec(co, module.__dict__)
+tests/unit/mas_core/test_consensus.py:5: in <module>
+    from mas_core.consensus import (
+mas_core/consensus.py:14: in <module>
+    from .utils.logging import MASLogger
+mas_core/utils/logging.py:14: in <module>
+    from pythonjsonlogger import jsonlogger
+E   ModuleNotFoundError: No module named 'pythonjsonlogger'
+__________ ERROR collecting tests/unit/mas_core/test_error_handler.py __________
+ImportError while importing test module '/Users/zach/GitBridgev1/tests/unit/mas_core/test_error_handler.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/_pytest/python.py:493: in importtestmodule
+    mod = import_path(
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/_pytest/assertion/rewrite.py:185: in exec_module
+    exec(co, module.__dict__)
+tests/unit/mas_core/test_error_handler.py:5: in <module>
+    from mas_core.error_handler import ErrorHandler, MASError, ErrorCategory
+mas_core/error_handler.py:15: in <module>
+    from .utils.logging import MASLogger
+mas_core/utils/logging.py:14: in <module>
+    from pythonjsonlogger import jsonlogger
+E   ModuleNotFoundError: No module named 'pythonjsonlogger'
+___________ ERROR collecting tests/unit/mas_core/test_event_queue.py ___________
+ImportError while importing test module '/Users/zach/GitBridgev1/tests/unit/mas_core/test_event_queue.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/_pytest/python.py:493: in importtestmodule
+    mod = import_path(
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/_pytest/assertion/rewrite.py:185: in exec_module
+    exec(co, module.__dict__)
+tests/unit/mas_core/test_event_queue.py:10: in <module>
+    from scripts.event_queue import EventQueue, WebhookPayload, RetryHandler
+scripts/event_queue.py:12: in <module>
+    from pydantic import BaseModel, Field
+E   ModuleNotFoundError: No module named 'pydantic'
+_____________ ERROR collecting tests/unit/mas_core/test_metrics.py _____________
+ImportError while importing test module '/Users/zach/GitBridgev1/tests/unit/mas_core/test_metrics.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/_pytest/python.py:493: in importtestmodule
+    mod = import_path(
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/_pytest/assertion/rewrite.py:185: in exec_module
+    exec(co, module.__dict__)
+tests/unit/mas_core/test_metrics.py:6: in <module>
+    from mas_core.metrics import MetricsCollector, TaskMetrics, ConsensusMetrics, SystemMetrics
+mas_core/metrics.py:16: in <module>
+    from .utils.logging import MASLogger
+mas_core/utils/logging.py:14: in <module>
+    from pythonjsonlogger import jsonlogger
+E   ModuleNotFoundError: No module named 'pythonjsonlogger'
+___________ ERROR collecting tests/unit/mas_core/test_task_chain.py ____________
+ImportError while importing test module '/Users/zach/GitBridgev1/tests/unit/mas_core/test_task_chain.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/_pytest/python.py:493: in importtestmodule
+    mod = import_path(
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/_pytest/assertion/rewrite.py:185: in exec_module
+    exec(co, module.__dict__)
+tests/unit/mas_core/test_task_chain.py:11: in <module>
+    from mas_core.task_chain import TaskChain, TaskState, TaskMetadata
+mas_core/task_chain.py:16: in <module>
+    from pydantic import BaseModel, Field
+E   ModuleNotFoundError: No module named 'pydantic'
+
+---------- coverage: platform darwin, python 3.13.3-final-0 ----------
+Name                           Stmts   Miss  Cover   Missing
+------------------------------------------------------------
+agent/__init__.py                  0      0   100%
+agent/framework/__init__.py        0      0   100%
+mas_core/__init__.py               0      0   100%
+mas_core/consensus.py             96     89     7%   15-252
+mas_core/error_handler.py         84     77     8%   17-200
+mas_core/metrics.py               91     83     9%   18-185
+mas_core/task_chain.py           192    183     5%   18-559
+mas_core/utils/logging.py         33     26    21%   17-130
+mas_core/utils/validation.py      56     40    29%   33, 45-49, 61-88, 100-107, 119-139, 148
+webui/__init__.py                  0      0   100%
+------------------------------------------------------------
+TOTAL                            552    498    10%
+Coverage HTML written to dir htmlcov
+
+============================ Hypothesis Statistics =============================
+=========================== short test summary info ============================
+ERROR tests/integration/test_webhook_flow.py
+ERROR tests/unit/integrations/test_signature_validator.py
+ERROR tests/unit/integrations/test_webhook_listener.py
+ERROR tests/unit/mas_core/test_consensus.py
+ERROR tests/unit/mas_core/test_error_handler.py
+ERROR tests/unit/mas_core/test_event_queue.py
+ERROR tests/unit/mas_core/test_metrics.py
+ERROR tests/unit/mas_core/test_task_chain.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 8 errors during collection !!!!!!!!!!!!!!!!!!!!
+======================= 6 deselected, 8 errors in 4.17s ========================
